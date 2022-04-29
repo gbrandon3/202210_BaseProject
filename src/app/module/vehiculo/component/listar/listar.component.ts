@@ -9,6 +9,7 @@ import { VehiculoService } from 'src/app/service/vehiculo.service';
 })
 export class ListarComponent implements OnInit {
   vehiculos:Array<Vehiculo>=[]
+  marcas=new Map<string,number>()
   constructor(private vehiculoService:VehiculoService) { }
 
   ngOnInit() {
@@ -16,8 +17,21 @@ export class ListarComponent implements OnInit {
     }
   getVehiculoService():void{
     this.vehiculoService.getVehiculos().subscribe((vehiculos:Vehiculo[])=>{
-      console.log(vehiculos)
+
       this.vehiculos=vehiculos;
+      this.vehiculos.forEach(vehiculo => {
+        if(this.marcas.has(vehiculo.marca)){
+
+         this.marcas.set(vehiculo.marca,this.marcas.get(vehiculo.marca)!+1)
+        }else{
+          this.marcas.set(vehiculo.marca,1)
+        }
+
+
+      });
+
+
+      console.log(this.marcas)
     })
   }
 
