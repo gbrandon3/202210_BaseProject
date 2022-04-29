@@ -31,7 +31,7 @@ export class ListarComponent implements OnInit {
       });
 
 
-      console.log(this.marcas)
+      
     })
   }
 
