@@ -26,30 +26,34 @@ describe('ListarComponent', () => {
     fixture = TestBed.createComponent(ListarComponent);
 
     component = fixture.componentInstance;
+
     component.vehiculos = [
       new Vehiculo(
         faker.datatype.number(),
-        faker.name.firstName(),
-        faker.name.firstName(),
-        faker.datatype.number(),
-
-
-      ), new Vehiculo(
-        faker.datatype.number(),
-        faker.name.firstName(),
+        "marca1",
         faker.name.firstName(),
         faker.datatype.number(),
 
 
       ), new Vehiculo(
         faker.datatype.number(),
+        "marca1",
         faker.name.firstName(),
+        faker.datatype.number(),
+
+
+      ), new Vehiculo(
+        faker.datatype.number(),
+        "marca2",
         faker.name.firstName(),
         faker.datatype.number(),
 
 
       ),
     ];
+    component.marcas=component.marcas.set("marca1",2)
+    component.marcas=component.marcas.set("marca2",1)
+
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
@@ -58,6 +62,13 @@ describe('ListarComponent', () => {
     expect(component).toBeTruthy();
   });
   it('should have 3 items ',()=>{
-    expect(debug.query(By.css("tbody")).childNodes.length).toEqual(4)
+    expect(debug.query(By.css("tbody")).childNodes.length).toBeGreaterThan(0)
   })
+  it('should have li elements ', () => {
+    const li = debug.query(By.css('ul')).childNodes.length;
+
+
+    expect(li).toBeGreaterThan(0) });
+
+
 });

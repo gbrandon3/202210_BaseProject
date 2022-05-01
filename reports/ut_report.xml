@@ -1,21 +1,14 @@
 <testExecutions version="1">
+  <file path="src/app/module/vehiculo/component/listar/listar.component.spec.ts">
+    <testCase name="ListarComponent should create" duration="56"/>
+    <testCase name="ListarComponent should have 3 items " duration="14"/>
+    <testCase name="ListarComponent should have li elements " duration="14"/>
+  </file>
   <file path="src/app/service/vehiculo.service.spec.ts">
-    <testCase name="Service: Vehiculo should ..." duration="24"/>
+    <testCase name="Service: Vehiculo should ..." duration="2"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should render title" duration="90">
-      <failure message="Error">Error: Expected undefined to contain 'base-project app is running!'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:29:66)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
-    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
-</failure>
-    </testCase>
-    <testCase name="AppComponent should have as title 'base-project'" duration="11"/>
-    <testCase name="AppComponent should create the app" duration="6"/>
-  </file>
-  <file path="src/app/module/vehiculo/component/listar/listar.component.spec.ts">
-    <testCase name="ListarComponent should have 3 items " duration="43"/>
-    <testCase name="ListarComponent should create" duration="20"/>
+    <testCase name="AppComponent should create the app" duration="11"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="8"/>
   </file>
 </testExecutions>
