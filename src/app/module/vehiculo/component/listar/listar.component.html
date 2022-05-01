@@ -17,8 +17,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let vehiculo of vehiculos">
-      <th scope="row">{{vehiculo.id}}</th>
+    <tr *ngFor="let vehiculo of vehiculos;let indexOfelement=index">
+      <th scope="row">{{indexOfelement+1}}</th>
       <td>{{vehiculo.marca}}</td>
       <td>{{vehiculo.linea}}</td>
       <td>{{vehiculo.modelo}}</td>
